@@ -1,0 +1,11 @@
+# SO / editores
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# eventuais dependências futuras (caso o projeto evolua)
+node_modules/
+dist/
+.netlify/

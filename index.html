@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Katz Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<div class="login-screen" id="loginScreen">
+  <div class="login-card">
+    <img class="login-mark" src="assets/katz-logo.png" alt="Katz">
+    <h1>Katz Academy</h1>
+    <p>Entre com seu nome e a senha de acesso para continuar seu treinamento. Seu progresso por módulo fica salvo no seu nome.</p>
+    <form id="loginForm">
+      <label>Nome
+        <input type="text" id="loginName" autocomplete="name" placeholder="Como você quer ser identificado" required>
+      </label>
+      <label>Cargo / função <span style="font-weight:400; color:var(--slate-light)">(opcional)</span>
+        <input type="text" id="loginRole" autocomplete="organization-title" placeholder="Ex.: Supervisor(a) de Obras">
+      </label>
+      <label>Senha de acesso
+        <input type="password" id="loginPass" autocomplete="current-password" placeholder="••••••••" required>
+      </label>
+      <div class="login-error" id="loginError"></div>
+      <button type="submit">Entrar</button>
+    </form>
+    <div class="login-foot">Grupo Katz · Desde 1975 — acesso interno</div>
+  </div>
+</div>
+
+<div class="app" id="appRoot" style="display:none">
+  <aside class="rail">
+    <div class="brand">
+      <img class="brand-logo" src="assets/katz-logo.png" alt="Katz">
+      <div class="brand-text">
+        <div class="s">Katz Academy</div>
+      </div>
+      <button class="mobile-toggle" id="navToggle">Menu ▾</button>
+    </div>
+
+    <div class="progress-wrap">
+      <div class="progress-top"><span id="progressLabel">0 de 5 concluídos</span><span id="progressPct">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <ul class="navlist" id="navlist"></ul>
+    <div class="rail-foot">
+      <div class="user-row">
+        <span id="userName">—</span>
+        <button id="logoutBtn" title="Sair">Sair</button>
+      </div>
+      <b>Grupo Katz</b> · Desde 1975<br>
+      Construindo com você.<br>
+      (31) 3243-1001 · katz.eng.br
+    </div>
+  </aside>
+
+  <div class="content">
+    <div class="topbar">
+      <div class="topbar-left">
+        <img class="tb-logo" src="assets/katz-logo.png" alt="Katz">
+        <span class="tb-divider"></span>
+        <span class="tb-company">Construções e Participações Ltda</span>
+      </div>
+      <div class="topbar-right">
+        <div class="tb-user">
+          <div class="tb-name" id="tbName">—</div>
+          <div class="tb-role" id="tbRole">Katz Academy</div>
+        </div>
+        <div class="tb-avatar" id="tbAvatar">?</div>
+      </div>
+    </div>
+    <div class="subbar"><span class="crumb">Katz Academy  /  <b id="crumbTitle">Início</b></span></div>
+    <div id="view"></div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

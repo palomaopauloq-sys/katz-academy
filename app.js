@@ -62,7 +62,7 @@ const orgData = {
   branches:[
     {name:'Financeiro', main:false, items:[
       ['Contas a Pagar'],['Contas a Receber'],['Cobrança'],
-      ['Contabilidade'],
+      ['Contabilidade (Controladoria)'],
       ['Departamento Pessoal (DP)'],
       ['Tesouraria','Fluxo de caixa diário · mensal'],
       ['Tributário & Impostos'],['DRE & Demonstrações','Resultado · Patrimônio líquido'],

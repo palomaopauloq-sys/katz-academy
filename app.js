@@ -751,7 +751,7 @@ inicio(){
 
   <div class="section-label">Sua trilha</div>
   <div class="card-grid">
-    ${modules.map(m => moduleCardHTML(m)).join('')}
+    ${trackableModules.map(m => moduleCardHTML(m)).join('')}
   </div>
   `;
 },

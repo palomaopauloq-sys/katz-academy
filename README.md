@@ -56,11 +56,12 @@ Definida em `app.js`, array `unlockOrder`. Ordem atual:
 1. `principios` — Boas-vindas & Princípios Katz
 2. `organograma` — Nossa Estrutura
 3. `lideranca` — Guia de Liderança
-4. `dp` — Departamento Pessoal
-5. `empreiteiras` — Documentação de Empreiteiras
-6. `planejamento` — POP Planejamento de Obras
-7. `financeiro` — POP Financeiro
-8. `compras` — POP Compras
+4. `dp` — Departamento Pessoal (inclui, como sub-módulo na mesma página, a Documentação de Empreiteiras)
+5. `planejamento` — POP Planejamento de Obras
+6. `financeiro` — POP Financeiro
+7. `compras` — POP Compras
+
+> `docEmpSections` (Documentação de Empreiteiras) não é mais um módulo separado da trilha — seu conteúdo é renderizado dentro do renderer `dp()`, como uma segunda seção/accordion na mesma página do Departamento Pessoal.
 
 Cada módulo só é liberado depois que o anterior é marcado como concluído. `inicio` (visão geral) é sempre livre.
 

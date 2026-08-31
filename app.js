@@ -515,14 +515,14 @@ const modules = [
  {id:'organograma', num:'02', label:'Nossa Estrutura', crumb:'Nossa Estrutura', category:'TRILHA DE CULTURA', icon:'▤', iconBg:'#e9f0f9', iconColor:'#2a5484'},
  {id:'lideranca', num:'03', label:'Guia de Liderança', crumb:'Guia de Liderança', category:'TRILHA DE LIDERANÇA', icon:'◈', iconBg:'#e6f4f3', iconColor:'#2b8f86'},
  {id:'dp', num:'04', label:'Departamento Pessoal', crumb:'Departamento Pessoal', category:'TRILHA DE PROCESSOS', icon:'▣', iconBg:'#f2ecf9', iconColor:'#7c5cb8'},
- {id:'empreiteiras', num:'05', label:'Documentação de Empreiteiras', crumb:'Documentação de Empreiteiras', category:'TRILHA DE PROCESSOS', icon:'⛊', iconBg:'#fdece7', iconColor:'#d9622b'},
- {id:'planejamento', num:'06', label:'Planejamento de Obras', crumb:'POP · Planejamento de Obras', category:'TRILHA DE PROCESSOS', icon:'◫', iconBg:'#eef0fb', iconColor:'#5b5fc7'},
- {id:'financeiro', num:'07', label:'Financeiro', crumb:'POP · Financeiro', category:'TRILHA DE PROCESSOS', icon:'¤', iconBg:'#fdeeee', iconColor:'#c0392b'},
- {id:'compras', num:'08', label:'Compras', crumb:'POP · Compras', category:'TRILHA DE PROCESSOS', icon:'⚒', iconBg:'#eaf6fb', iconColor:'#1f7a99'}
+ {id:'planejamento', num:'05', label:'Planejamento de Obras', crumb:'POP · Planejamento de Obras', category:'TRILHA DE PROCESSOS', icon:'◫', iconBg:'#eef0fb', iconColor:'#5b5fc7'},
+ {id:'financeiro', num:'06', label:'Financeiro', crumb:'POP · Financeiro', category:'TRILHA DE PROCESSOS', icon:'¤', iconBg:'#fdeeee', iconColor:'#c0392b'},
+ {id:'compras', num:'07', label:'Compras', crumb:'POP · Compras', category:'TRILHA DE PROCESSOS', icon:'⚒', iconBg:'#eaf6fb', iconColor:'#1f7a99'}
 ];
 
 /* ordem de desbloqueio — cada módulo exige o anterior concluído; 'inicio' é sempre livre */
-const unlockOrder = ['principios','organograma','lideranca','dp','empreiteiras','planejamento','financeiro','compras'];
+/* 'empreiteiras' não é mais um módulo separado: seu conteúdo virou uma seção dentro de 'dp' (Departamento Pessoal) */
+const unlockOrder = ['principios','organograma','lideranca','dp','planejamento','financeiro','compras'];
 function isLocked(id){
   if(id === 'inicio') return false;
   const i = unlockOrder.indexOf(id);
@@ -880,28 +880,23 @@ dp(){
         </div>
       </div>`).join('')}
   </div>
-  ${pagerHTML('dp')}
-  `;
-},
 
-empreiteiras(){
-  return `
-  <div class="section-label">Módulo 05 · Trilha de Processos</div>
-  <h2 class="page-title">Documentação de Empreiteiras</h2>
+  <div class="section-label" style="margin-top:34px;">Sub-módulo · Documentação de Empreiteiras</div>
   <p class="page-sub">Treinamento Katz/Hauz sobre due diligence, documentação de entrada e documentação de pagamento de empresas terceirizadas em obra. Abril 2024.</p>
   <div class="accordion">
     ${docEmpSections.map((s,i)=>`
-      <div class="acc-item ${i===0?'open':''}">
+      <div class="acc-item">
         <div class="acc-head">
           <div class="htitle"><span class="tag">${s.tag}</span><h4>${s.title}</h4></div>
           <span class="chev">▾</span>
         </div>
-        <div class="acc-body" style="${i===0?'max-height:none':'max-height:0'}">
+        <div class="acc-body" style="max-height:0">
           <div class="acc-body-inner">${s.body}</div>
         </div>
       </div>`).join('')}
   </div>
-  ${pagerHTML('empreiteiras')}
+
+  ${pagerHTML('dp')}
   `;
 },
 
@@ -974,9 +969,8 @@ function moduleDesc(id){
     inicio:'Sua visão geral: progresso na trilha, indicadores e acesso rápido a todos os módulos.',
     principios:'Quem somos e como decidimos, lideramos e trabalhamos — comece por aqui no seu primeiro dia.',
     organograma:'Onde você se encaixa: Financeiro, Comercial e Engenharia sob a Direção Geral.',
-    dp:'Seus direitos e deveres como colaborador(a): admissão, ponto, folha, benefícios, férias e rescisão.',
+    dp:'Seus direitos e deveres como colaborador(a): admissão, ponto, folha, benefícios, férias, rescisão — e a documentação de empreiteiras (due diligence, checklists e pagamento de terceiros).',
     lideranca:'Para gestores e diretores: cada princípio aplicado à gestão de pessoas, com exemplos e frameworks.',
-    empreiteiras:'Para quem gerencia obra e qualidade: due diligence, checklists e calendário de pagamento de terceiros.',
     planejamento:'Cronogramas, acompanhamento físico, orçamento e sistemas (Mega/Approvo) — do Setor de Planejamento.',
     financeiro:'Contas a Receber, Contas a Pagar e Composição do Fluxo de Caixa — do Setor Financeiro.',
     compras:'Cotação, negociação, aprovação por alçada e acompanhamento de entrega — do Setor de Compras.'

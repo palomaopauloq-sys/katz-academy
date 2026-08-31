@@ -72,7 +72,7 @@ Array `colaboradores` em `app.js`, um objeto por pessoa: `{nome, cargo, telefone
 - `foto`: caminho em `assets/team/`. Vazio → avatar com iniciais automaticamente.
 - `telefone`/`email`: viram links clicáveis (`tel:`/`mailto:`) automaticamente. Formato padronizado do telefone: `(DD) NNNNN-NNNN`, sem `+55`.
 
-**Já cadastrados (6, todos completos com foto):** Daniel Katz (CEO), Bernardo C. L. Tavares (Diretor Comercial), Caetano Aliani (Superintendente de Obras), Guilherme Caldeira (Controladoria), Lucas Arieh (Marketing Digital), Paloma Oliveira (Coordenadora de Qualidade).
+**Já cadastrados (7, todos completos com foto):** Daniel Katz (CEO), Bernardo C. L. Tavares (Diretor Comercial), Caetano Aliani (Superintendente de Obras), Guilherme Caldeira (Controladoria), Lucas Arieh (Marketing Digital), Paloma Oliveira (Coordenadora de Qualidade), Juliana de Mello (Gerente Financeiro).
 
 ⚠️ **Cuidado ao atribuir fotos a nomes**: já aconteceu de duas fotos parecidas (mesma pessoa, ângulos/dias diferentes) serem confundidas com pessoas diferentes. Sempre confirmar com o usuário antes de assumir "essa foto é de fulano" quando houver qualquer ambiguidade — reatribuir foto errada a uma pessoa real é um erro sério, não só cosmético.
 

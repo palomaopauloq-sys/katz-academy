@@ -90,7 +90,8 @@ const orgData = {
    Exemplo:
    {nome:'Joana Silva', cargo:'Coordenadora de Planejamento', telefone:'(11) 91234-5678', foto:'assets/team/joana.jpg'} */
 const colaboradores = [
-  // aguardando fotos, nomes, cargos e telefones da equipe
+  {nome:'Caetano Aliani', cargo:'Superintendente de Obras — responsável pela Engenharia', telefone:'(31) 98403-4563', foto:'assets/team/caetano-aliani.jpg'}
+  // demais colaboradores entram aqui conforme forem enviados
 ];
 
 /* POP - Departamento Pessoal */

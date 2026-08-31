@@ -84,13 +84,19 @@ const orgData = {
 };
 
 /* Colaboradores — diretório de contatos exibido em "Nossa Estrutura".
-   Preencha um objeto por pessoa: {nome, cargo, telefone, foto}.
+   Preencha um objeto por pessoa: {nome, cargo, telefone, email, foto}.
    - foto: caminho do arquivo dentro de assets/ (ex: 'assets/team/joana.jpg'). Se vazio/omitido, mostra um avatar com as iniciais do nome.
    - telefone: aceita qualquer formato de exibição; vira link clicável (tel:) automaticamente. Pode deixar '' se não tiver.
+   - email: vira link clicável (mailto:) automaticamente. Pode deixar '' se não tiver.
    Exemplo:
-   {nome:'Joana Silva', cargo:'Coordenadora de Planejamento', telefone:'(11) 91234-5678', foto:'assets/team/joana.jpg'} */
+   {nome:'Joana Silva', cargo:'Coordenadora de Planejamento', telefone:'(11) 91234-5678', email:'joana@katz.com.br', foto:'assets/team/joana.jpg'} */
 const colaboradores = [
-  {nome:'Caetano Aliani', cargo:'Superintendente de Obras — responsável pela Engenharia', telefone:'(31) 98403-4563', foto:'assets/team/caetano-aliani.jpg'}
+  {nome:'Daniel Katz', cargo:'CEO', telefone:'(31) 99981-4538', email:'daniel@katz.eng.br', foto:''},
+  {nome:'Bernardo C. L. Tavares', cargo:'Diretor Comercial', telefone:'+55 31 9550-1511', email:'novosnegocios@katz.eng.br', foto:'assets/team/bernardo-tavares.jpg'},
+  {nome:'Caetano Aliani', cargo:'Superintendente de Obras — responsável pela Engenharia', telefone:'(31) 98403-4563', email:'caetano@katz.eng.br', foto:'assets/team/caetano-aliani.jpg'},
+  {nome:'Guilherme Caldeira', cargo:'Controladoria', telefone:'(31) 9860-8035', email:'', foto:'assets/team/guilherme-caldeira.jpg'},
+  {nome:'Lucas Arieh', cargo:'Marketing Digital', telefone:'+55 31 8340-8872', email:'marketing@katz.eng.br', foto:'assets/team/lucas-arieh.jpg'},
+  {nome:'Paloma Oliveira', cargo:'Coordenadora de Qualidade', telefone:'(38) 9 8835-6472', email:'supervisao@katz.eng.br', foto:'assets/team/paloma-oliveira.jpg'}
   // demais colaboradores entram aqui conforme forem enviados
 ];
 
@@ -1007,6 +1013,7 @@ function initials(name){
 function colaboradorCardHTML(c){
   const tel = (c.telefone||'').trim();
   const telHref = tel ? 'tel:' + tel.replace(/[^\d+]/g,'') : '';
+  const email = (c.email||'').trim();
   const photo = c.foto
     ? `<img class="people-photo" src="${c.foto}" alt="${c.nome||''}">`
     : `<div class="people-avatar">${initials(c.nome)}</div>`;
@@ -1017,6 +1024,7 @@ function colaboradorCardHTML(c){
         <h4>${c.nome||''}</h4>
         ${c.cargo ? `<p class="people-role">${c.cargo}</p>` : ''}
         ${tel ? `<a class="people-phone" href="${telHref}">${tel}</a>` : ''}
+        ${email ? `<a class="people-email" href="mailto:${email}">${email}</a>` : ''}
       </div>
     </div>`;
 }

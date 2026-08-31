@@ -92,11 +92,11 @@ const orgData = {
    {nome:'Joana Silva', cargo:'Coordenadora de Planejamento', telefone:'(11) 91234-5678', email:'joana@katz.com.br', foto:'assets/team/joana.jpg'} */
 const colaboradores = [
   {nome:'Daniel Katz', cargo:'CEO', telefone:'(31) 99981-4538', email:'daniel@katz.eng.br', foto:'assets/team/daniel-katz.jpg'},
-  {nome:'Bernardo C. L. Tavares', cargo:'Diretor Comercial', telefone:'+55 31 9550-1511', email:'novosnegocios@katz.eng.br', foto:'assets/team/bernardo-tavares.jpg'},
+  {nome:'Bernardo C. L. Tavares', cargo:'Diretor Comercial', telefone:'(31) 9550-1511', email:'novosnegocios@katz.eng.br', foto:'assets/team/bernardo-tavares.jpg'},
   {nome:'Caetano Aliani', cargo:'Superintendente de Obras — responsável pela Engenharia', telefone:'(31) 98403-4563', email:'caetano@katz.eng.br', foto:''},
   {nome:'Guilherme Caldeira', cargo:'Controladoria', telefone:'(31) 9860-8035', email:'controller@katz.eng.br', foto:'assets/team/guilherme-caldeira.jpg'},
-  {nome:'Lucas Arieh', cargo:'Marketing Digital', telefone:'+55 31 8340-8872', email:'marketing@katz.eng.br', foto:'assets/team/lucas-arieh.jpg'},
-  {nome:'Paloma Oliveira', cargo:'Coordenadora de Qualidade', telefone:'(38) 9 8835-6472', email:'supervisao@katz.eng.br', foto:'assets/team/paloma-oliveira.jpg'}
+  {nome:'Lucas Arieh', cargo:'Marketing Digital', telefone:'(31) 8340-8872', email:'marketing@katz.eng.br', foto:'assets/team/lucas-arieh.jpg'},
+  {nome:'Paloma Oliveira', cargo:'Coordenadora de Qualidade', telefone:'(38) 98835-6472', email:'supervisao@katz.eng.br', foto:'assets/team/paloma-oliveira.jpg'}
   // demais colaboradores entram aqui conforme forem enviados
 ];
 

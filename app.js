@@ -968,6 +968,7 @@ function moduleDesc(id){
 }
 
 function moduleCardHTML(m){
+  if(m.id === 'inicio') return ''; // card de Início nunca aparece na própria grade da trilha
   const locked = isLocked(m.id);
   const done = !!completed[m.id];
   let footer;

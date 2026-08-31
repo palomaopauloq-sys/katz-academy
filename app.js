@@ -83,6 +83,16 @@ const orgData = {
   ]
 };
 
+/* Colaboradores — diretório de contatos exibido em "Nossa Estrutura".
+   Preencha um objeto por pessoa: {nome, cargo, telefone, foto}.
+   - foto: caminho do arquivo dentro de assets/ (ex: 'assets/team/joana.jpg'). Se vazio/omitido, mostra um avatar com as iniciais do nome.
+   - telefone: aceita qualquer formato de exibição; vira link clicável (tel:) automaticamente. Pode deixar '' se não tiver.
+   Exemplo:
+   {nome:'Joana Silva', cargo:'Coordenadora de Planejamento', telefone:'(11) 91234-5678', foto:'assets/team/joana.jpg'} */
+const colaboradores = [
+  // aguardando fotos, nomes, cargos e telefones da equipe
+];
+
 /* POP - Departamento Pessoal */
 const popSections = [
  {tag:'1–2', title:'Objetivo e campo de aplicação', body:`
@@ -859,6 +869,17 @@ organograma(){
     </div>
   </div>
   <div class="draft-note">v1 · rascunho para validação — itens marcados "sugestão a validar" ainda não confirmados</div>
+
+  <div class="section-label" style="margin-top:34px;">Colaboradores</div>
+  ${colaboradores.length === 0 ? `
+  <div class="callout">
+    <span class="ico">👥</span>
+    <span>Diretório de contatos da equipe em preparação — nomes, cargos, telefones e fotos entram aqui em breve.</span>
+  </div>` : `
+  <div class="people-grid">
+    ${colaboradores.map(c => colaboradorCardHTML(c)).join('')}
+  </div>`}
+
   ${pagerHTML('organograma')}
   `;
 },
@@ -976,6 +997,27 @@ function moduleDesc(id){
     compras:'Cotação, negociação, aprovação por alçada e acompanhamento de entrega — do Setor de Compras.'
   };
   return map[id] || '';
+}
+
+function initials(name){
+  return (name||'').trim().split(/\s+/).slice(0,2).map(w=>w.charAt(0).toUpperCase()).join('') || '?';
+}
+
+function colaboradorCardHTML(c){
+  const tel = (c.telefone||'').trim();
+  const telHref = tel ? 'tel:' + tel.replace(/[^\d+]/g,'') : '';
+  const photo = c.foto
+    ? `<img class="people-photo" src="${c.foto}" alt="${c.nome||''}">`
+    : `<div class="people-avatar">${initials(c.nome)}</div>`;
+  return `
+    <div class="people-card">
+      ${photo}
+      <div class="people-info">
+        <h4>${c.nome||''}</h4>
+        ${c.cargo ? `<p class="people-role">${c.cargo}</p>` : ''}
+        ${tel ? `<a class="people-phone" href="${telHref}">${tel}</a>` : ''}
+      </div>
+    </div>`;
 }
 
 function moduleCardHTML(m){

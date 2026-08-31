@@ -525,6 +525,361 @@ const popComprasSections = [
    <p style="font-size:12px;color:var(--slate)">Documento controlado — cópia não controlada quando impressa. Todos os colaboradores envolvidos no processo devem ser treinados neste procedimento.</p>`}
 ];
 
+/* Fluxogramas A.D.O. — passo a passo no sistema MEGA (sub-seção dentro de Planejamento) */
+const fluxogramasAdoSections = [
+ {tag:'ADO 1', title:'Apropriação de Empreiteiros', body:`
+   <ol>
+     <li>Acessar sistema Mega</li>
+     <li>Acessar opção Gestão Empresarial / ERP</li>
+     <li>Selecionar Construção</li>
+     <li>Contratos de Empreiteiros</li>
+     <li>Selecionar Contratos</li>
+     <li>Selecionar Empreiteiro cadastrado</li>
+     <li>Selecionar Outros</li>
+     <li>Clicar em Dados Opcionais</li>
+     <li>Selecionar Apropriação</li>
+     <li>Clicar em Inserir</li>
+     <li>Inserir código de orçamento</li>
+     <li>Clicar nos 3 pontinhos de Estruturado</li>
+     <li>Inserir código estruturado no campo de busca</li>
+     <li>Selecionar os serviços do orçamento</li>
+     <li>Clicar nos 3 pontinhos do cód. insumo</li>
+     <li>Inserir código do tipo de insumo</li>
+     <li>Selecionar insumos do orçamento</li>
+     <li>Inserir quantidade contratada</li>
+     <li>Selecionar Confirmar para finalizar</li>
+   </ol>`},
+ {tag:'ADO 2', title:'Lançamento de Contrato', body:`
+   <ol>
+     <li>Acessar sistema Mega</li>
+     <li>Acessar opção Gestão Empresarial / ERP</li>
+     <li>Acessar opção Construção</li>
+     <li>Acessar a opção Contratos de Empreiteiros</li>
+     <li>Acessar a opção Contratos</li>
+     <li>Acessar a opção Inserir</li>
+     <li>Clicar nos três pontinhos de Fornecedor</li>
+     <li>Pesquisar empreiteiro no campo de busca</li>
+     <li>Selecionar Empreiteiro</li>
+     <li>Clicar nos três pontinhos de Obra/Projeto</li>
+     <li>Selecionar Obra</li>
+     <li>Inserir data de início e data final</li>
+     <li>Inserir tabela de preço cadastrada</li>
+     <li>Inserir centro de custo determinado</li>
+     <li>Na aba Serviços, clicar nos três pontinhos da opção Cód. Item</li>
+     <li>Buscar no campo de pesquisa o serviço contratado</li>
+     <li>Selecionar a opção de busca</li>
+     <li>Selecionar a classe 147 — Serviços de Empreiteiro</li>
+     <li>Inserir medida contratada</li>
+     <li>Inserir PR.Contrato</li>
+     <li>Inserir quantidade total</li>
+     <li>Selecionar a aba Menor Aprovação de Alçada</li>
+     <li>Selecionar a aba Retenções</li>
+     <li>Selecionar a aba Menor de Retenções</li>
+     <li>Excluir histórico de retenções</li>
+     <li>Clicar em Percentual</li>
+     <li>Selecionar a opção Caução Contratual por Medição</li>
+     <li>Preencher o percentual estabelecido (10%)</li>
+     <li>Mudar para aba Menor Aprovação Fiscal</li>
+     <li>Clicar em Aprovação, se confirmar</li>
+     <li>Voltar para aba Contratos</li>
+     <li>Clicar em Confirmar</li>
+   </ol>`},
+ {tag:'ADO 3', title:'Medição', body:`
+   <ol>
+     <li>Acessar o sistema Mega</li>
+     <li>Acessar a opção Gestão Empresarial / ERP</li>
+     <li>Acessar a opção Construção</li>
+     <li>Acessar a opção Contratos de Empreiteiros</li>
+     <li>Acessar a opção Medição</li>
+     <li>Selecionar o contrato cadastrado</li>
+     <li>Selecionar a opção Inserir</li>
+     <li>Selecionar Fornecedor nos três pontinhos de opção</li>
+     <li>Acessar a aba Itens do Contrato</li>
+     <li>Selecionar a opção Inserir</li>
+     <li>Na aba Medição, selecionar Valor Total e inserir valor de medição</li>
+     <li>Acessar a opção Local e selecionar opção Obra</li>
+     <li>Acessar a aba Apropriação</li>
+     <li>Selecionar a opção Inserir</li>
+     <li>Selecionar a obra de apropriação</li>
+     <li>Na opção Estruturado, selecionar tipo de serviço</li>
+     <li>Na opção Quantidade, selecionar a quantidade a ser apropriada</li>
+     <li>Selecionar Confirmar</li>
+     <li>Confirmar para liberar a medição para aprovação</li>
+   </ol>`},
+ {tag:'ADO 4', title:'Lançamento de Notas — Empreiteiro', body:`
+   <ol>
+     <li>Acessar o sistema Mega</li>
+     <li>Acessar a opção Gestão Empresarial / ERP</li>
+     <li>Acessar a opção Construção</li>
+     <li>Acessar a opção Contratos de Empreiteiros</li>
+     <li>Acessar a opção Entradas</li>
+     <li>Selecionar Contratos</li>
+     <li>Selecionar a opção Inserir</li>
+     <li>Na aba Documentos, selecionar a opção Cód. Medição e inserir código</li>
+     <li>Selecionar nº documento e tipo doc. (financeiro) e inserir dados</li>
+     <li>Inserir tipo de documento financeiro</li>
+     <li>Selecionar D.T. Entrada e inserir a data</li>
+     <li>Selecionar D.T. Emissão e inserir a data</li>
+     <li>Selecionar D.T. Competência e inserir a data</li>
+     <li>Selecionar cód. per. st. serviço</li>
+     <li>Selecionar aba Itens Medição e conferir dados</li>
+     <li>Acessar aba Observações</li>
+     <li>Gravar alterações</li>
+     <li>Selecionar Anexos</li>
+     <li>Na aba Anexos, selecionar Inserir</li>
+     <li>Selecionar arquivo do computador</li>
+     <li>Selecionar Abrir arquivo</li>
+     <li>Inserir descrição do documento e confirmar</li>
+     <li>Selecionar Gerar CPAG/TRF</li>
+     <li>Selecionar Gerar Parcelas</li>
+     <li>Inserir a data de vencimento e confirmar</li>
+     <li>Confirmar e selecionar a exportação da nota</li>
+     <li>Selecionar OK para confirmar autorização de pagamento</li>
+   </ol>`},
+ {tag:'ADO 5', title:'Solicitação de Material', body:`
+   <ol>
+     <li>Acessar sistema Mega</li>
+     <li>Acessar opção Gestão Empresarial / ERP</li>
+     <li>Acessar opção Construção</li>
+     <li>Acessar a opção Administração de Obras</li>
+     <li>Acessar a opção de Orçamentos</li>
+     <li>Acessar a opção Solicitações</li>
+     <li>Acessar a aba de Solicitações</li>
+     <li>Selecionar a opção Inserir</li>
+     <li>Selecionar a aba Itens Solicitados</li>
+     <li>Selecionar Serviço, Insumo</li>
+     <li>Confirmar opção selecionada</li>
+     <li>Selecionar a descrição</li>
+     <li>Selecionar a opção Trocar</li>
+     <li>Selecionar a opção Troca de Itens</li>
+     <li>Selecionar a opção Inserir</li>
+     <li>Selecionar o código do item e inserir</li>
+     <li>Inserir cód. de classe</li>
+     <li>Inserir cód. aplicação</li>
+     <li>Inserir custo unitário</li>
+     <li>Inserir qtde. a selecionar</li>
+     <li>Selecionar a opção Selecionar Troca</li>
+     <li>Selecionar OK para confirmar</li>
+     <li>Selecionar a aba Geral</li>
+     <li>Inserir observações (fornecedor e tipo de lançamento)</li>
+     <li>Confirmar solicitação</li>
+   </ol>`},
+ {tag:'ADO 6', title:'Cotação de Material', body:`
+   <ol>
+     <li>Acessar sistema Mega</li>
+     <li>Acessar opção Gestão Empresarial / ERP</li>
+     <li>Acessar opção Empresarial</li>
+     <li>Acessar a opção Materiais</li>
+     <li>Acessar a opção de Suprimentos</li>
+     <li>Acessar a opção de Cotação</li>
+     <li>Acessar a opção Em Aberto</li>
+     <li>Selecionar a aba Itens e Fornecedores</li>
+     <li>Selecionar a opção Itens Solicitados</li>
+     <li>Na aba Filtro, inserir data e filtrar</li>
+     <li>Na aba Itens Disponíveis, selecionar a opção desejada e confirmar</li>
+     <li>Selecionar a opção Inserir Fornecedor</li>
+     <li>No campo de pesquisa, inserir Fornecedor e selecionar</li>
+     <li>Selecionar a opção de Valores da Cotação</li>
+     <li>Selecionar a aba Fornecedor</li>
+     <li>Selecionar Condições de Pagamento e inserir</li>
+     <li>Selecionar a aba Itens</li>
+     <li>Inserir valor a converter</li>
+     <li>Selecionar em Encerrar e encerrar cotação</li>
+     <li>Confirmar cotação</li>
+   </ol>`},
+ {tag:'ADO 7', title:'Lançamento de Notas Fiscal', body:`
+   <ol>
+     <li>Acessar sistema Mega</li>
+     <li>Acessar opção Gestão Empresarial / ERP</li>
+     <li>Acessar opção Empresarial</li>
+     <li>Acessar a opção Materiais</li>
+     <li>Acessar a opção Entradas</li>
+     <li>Inserir nº do documento</li>
+     <li>Inserir data de emissão</li>
+     <li>Selecionar Agente e inserir</li>
+     <li>Selecionar tipo de preço</li>
+     <li>Selecionar cond. pagamento e inserir</li>
+     <li>Selecionar e inserir centro de custo</li>
+     <li>Selecionar e inserir projeto padrão</li>
+     <li>Selecionar e inserir valor das mercadorias</li>
+     <li>Selecionar a aba Itens</li>
+     <li>Selecionar a opção Inserir</li>
+     <li>Selecionar itens de pedido e confirmar</li>
+     <li>Selecionar a aba Edição de Itens</li>
+     <li>Atualizar dados mediante nota fiscal e confirmar</li>
+     <li>Selecionar aba de Itens</li>
+     <li>Selecionar opção Outros</li>
+     <li>Selecionar a opção Anexos</li>
+     <li>Selecionar a opção Inserir</li>
+     <li>Selecionar Nota Fiscal e abrir</li>
+     <li>Inserir descrição e confirmar</li>
+     <li>Selecionar a opção Confirmar</li>
+     <li>Atualizar data de vencimento e prorrogado</li>
+     <li>Selecionar Confirmar e OK para finalizar o lançamento</li>
+   </ol>`},
+ {tag:'ADO 8', title:'Relatório de Custo Realizado (ADO)', body:`
+   <ol>
+     <li>Acessar sistema Mega</li>
+     <li>Acessar opção Gestão Empresarial / ERP</li>
+     <li>Acessar opção Construção</li>
+     <li>Acessar a opção Administração de Obras</li>
+     <li>Acessar a opção Relatórios</li>
+     <li>Selecionar a opção Relatórios Operacionais</li>
+     <li>Selecionar a opção Custo Realizado</li>
+     <li>Atualizar parâmetros (orçamento, data de referência, custo realizado)</li>
+     <li>Selecionar na opção Visualizar</li>
+     <li>Selecionar a opção Exportar Relatório</li>
+     <li>Selecionar o tipo de arquivo</li>
+     <li>Selecionar Este Computador</li>
+     <li>Selecionar o local de armazenamento</li>
+     <li>Selecionar a opção Salvar</li>
+     <li>Quando aparecer finalizado, visualizar na seta Downloads</li>
+   </ol>`},
+ {tag:'ADO 9', title:'Cadastrar Primeiro Acesso', body:`
+   <ol>
+     <li>Acessar link de primeiro acesso</li>
+     <li>Acessar <span class="mono">agenda.megaerp.online/login</span></li>
+     <li>Inserir conta: 177</li>
+     <li>Clicar na aba de Cadastro de Usuário</li>
+     <li>Preencher Nome</li>
+     <li>Preencher Sobrenome</li>
+     <li>Preencher Display Name</li>
+     <li>Preencher e-mail</li>
+     <li>Selecionar Departamento</li>
+     <li>Clicar em Salvar</li>
+     <li>Receber senha de segundo acesso</li>
+     <li>Selecionar Grupo de Usuário</li>
+     <li>Inserir Grupo</li>
+     <li>Preencher login nome.sobrenome</li>
+     <li>Preencher e-mail</li>
+     <li>Preencher Nome</li>
+     <li>Preencher senha e confirmar senha</li>
+     <li>Configurar regra de validade para senha</li>
+     <li>Selecionar a aba Perfil por Organização e confirmar</li>
+     <li>Confirmar login de usuário</li>
+   </ol>`},
+ {tag:'ADO 10', title:'Passo a passo para abrir ticket no MEGA', body:`
+   <ol>
+     <li>Printar tela do erro</li>
+     <li>Anexar na abertura do ticket</li>
+     <li>Utilizar o link e clicar em Suporte</li>
+     <li>Acessar <span class="mono">oci.megaerp.online</span></li>
+     <li>Realizar login na página do MEGA ou cadastrar se primeiro acesso</li>
+     <li>Clicar em enviar uma solicitação</li>
+     <li>Preencher os campos em aberto</li>
+     <li>Explicar de forma detalhada, no campo da descrição, o que tentou ser feito e não obteve êxito</li>
+     <li>Selecionar tipo de solicitação</li>
+     <li>Selecionar módulo do sistema</li>
+     <li>Adicionar em anexo o print da tela do erro ocorrido</li>
+     <li>Enviar solicitação</li>
+     <li>Receber protocolo</li>
+     <li>Avaliar resposta do MEGA (2 dias para retorno)</li>
+   </ol>`}
+];
+
+/* POP — Marketing */
+const popMarketingSections = [
+ {tag:'1', title:'Planejamento de Campanhas', body:`
+   <ol>
+     <li>Receber solicitação de campanha via sistema interno ou reunião</li>
+     <li>Documentar objetivos, público-alvo, orçamento e prazo</li>
+     <li>Definir KPIs e metas de performance</li>
+     <li>Encaminhar briefing para análise</li>
+     <li>Analisar concorrência e tendências do mercado</li>
+     <li>Pesquisar comportamento do público-alvo</li>
+     <li>Identificar oportunidades e ameaças</li>
+     <li>Definir estratégia e canais recomendados</li>
+     <li>Documentar análise em relatório padronizado</li>
+     <li>Revisar briefing e análise de mercado</li>
+     <li>Definir cronograma detalhado de execução</li>
+     <li>Alocação de recursos humanos e financeiros</li>
+     <li>Estabelecer marcos de entrega (milestones)</li>
+     <li>Aprovar início da fase criativa</li>
+   </ol>`},
+ {tag:'2', title:'Criação de Materiais', body:`
+   <ol>
+     <li>Analisar briefing e diretrizes da marca</li>
+     <li>Desenvolver conceito criativo alinhado aos objetivos</li>
+     <li>Definir tom de comunicação e elementos visuais</li>
+     <li>Documentar conceito para orientar</li>
+     <li>Submeter conceito para aprovação interna</li>
+     <li>Receber briefing e conceito criativo aprovado</li>
+     <li>Produzir textos seguindo diretrizes da marca</li>
+     <li>Adaptar conteúdo para diferentes canais</li>
+     <li>Revisar ortografia e gramática</li>
+     <li>Submeter textos para revisão interna</li>
+     <li>Receber briefing, conceito e textos aprovados</li>
+     <li>Criar layouts seguindo identidade visual</li>
+     <li>Desenvolver variações para diferentes formatos</li>
+     <li>Otimizar materiais para cada plataforma</li>
+     <li>Submeter artes para revisão interna</li>
+     <li>Revisar alinhamento com briefing e objetivos</li>
+     <li>Verificar consistência com identidade da marca</li>
+     <li>Validar especificações técnicas</li>
+     <li>Solicitar ajustes se necessário</li>
+     <li>Aprovar materiais para apresentação ao cliente</li>
+     <li>Apresentar materiais em formato de mockup</li>
+     <li>Coletar feedback e solicitações de ajuste</li>
+     <li>Documentar alterações solicitadas</li>
+     <li>Implementar ajustes aprovados</li>
+     <li>Obter aprovação final por escrito</li>
+   </ol>`},
+ {tag:'3', title:'Implementação Técnica', body:`
+   <ol>
+     <li>Configurar pixels de rastreamento nas plataformas</li>
+     <li>Definir públicos-alvo e segmentações</li>
+     <li>Estabelecer orçamentos e lances</li>
+     <li>Configurar metas e eventos de conversão</li>
+     <li>Testar configurações antes da publicação</li>
+     <li>Inserir materiais aprovados nas plataformas</li>
+     <li>Configurar segmentações e orçamentos</li>
+     <li>Agendar publicações conforme cronograma</li>
+     <li>Revisar configurações finais</li>
+     <li>Manter conteúdo em modo rascunho</li>
+     <li>Fazer revisão final de todos os elementos</li>
+     <li>Ativar campanhas conforme cronograma</li>
+     <li>Verificar se publicações estão ativas</li>
+     <li>Documentar horário e data de ativação</li>
+     <li>Comunicar ativação para equipe</li>
+   </ol>`},
+ {tag:'4', title:'Monitoramento e Otimização', body:`
+   <ol>
+     <li>Verificar performance das campanhas ativas</li>
+     <li>Monitorar métricas principais (CTR, CPC, conversões)</li>
+     <li>Identificar campanhas com performance abaixo do esperado</li>
+     <li>Implementar otimizações básicas (ajuste de lance, pausar anúncios)</li>
+     <li>Documentar alterações realizadas</li>
+     <li>Compilar dados de performance da semana</li>
+     <li>Calcular KPIs principais (ROI, CAC, taxa de conversão)</li>
+     <li>Comparar resultados com metas estabelecidas</li>
+     <li>Identificar insights e oportunidades de melhoria</li>
+     <li>Apresentar relatório para coordenação</li>
+     <li>Consolidar dados de performance do mês anterior</li>
+     <li>Analisar tendências e padrões de comportamento</li>
+     <li>Avaliar ROI geral das campanhas</li>
+     <li>Identificar campanhas de maior e menor sucesso</li>
+     <li>Propor ajustes estratégicos para próximo período</li>
+   </ol>`},
+ {tag:'5', title:'Gestão de Redes Sociais', body:`
+   <ol>
+     <li>Criar calendário editorial semanal/mensal</li>
+     <li>Definir temas e formatos de conteúdo</li>
+     <li>Alinhar conteúdo com campanhas ativas</li>
+     <li>Programar dias e horários de publicação</li>
+     <li>Submeter calendário para aprovação</li>
+     <li>Produzir conteúdo conforme calendário</li>
+     <li>Criar materiais visuais necessários</li>
+     <li>Revisar conteúdo antes da publicação</li>
+     <li>Publicar nos dias e horários programados</li>
+     <li>Monitorar primeiras interações</li>
+     <li>Responder comentários e mensagens em até 2h em tempo real</li>
+     <li>Moderar comentários inadequados</li>
+     <li>Engajar com seguidores de forma proativa</li>
+     <li>Identificar oportunidades de relacionamento</li>
+     <li>Escalar questões complexas para coordenação</li>
+   </ol>`}
+];
+
 /* ============================ MODULES ============================ */
 
 const modules = [
@@ -535,12 +890,13 @@ const modules = [
  {id:'dp', num:'04', label:'Departamento Pessoal', crumb:'Departamento Pessoal', category:'TRILHA DE PROCESSOS', icon:'▣', iconBg:'#f2ecf9', iconColor:'#7c5cb8'},
  {id:'planejamento', num:'05', label:'Planejamento de Obras', crumb:'POP · Planejamento de Obras', category:'TRILHA DE PROCESSOS', icon:'◫', iconBg:'#eef0fb', iconColor:'#5b5fc7'},
  {id:'financeiro', num:'06', label:'Financeiro', crumb:'POP · Financeiro', category:'TRILHA DE PROCESSOS', icon:'¤', iconBg:'#fdeeee', iconColor:'#c0392b'},
- {id:'compras', num:'07', label:'Compras', crumb:'POP · Compras', category:'TRILHA DE PROCESSOS', icon:'⚒', iconBg:'#eaf6fb', iconColor:'#1f7a99'}
+ {id:'compras', num:'07', label:'Compras', crumb:'POP · Compras', category:'TRILHA DE PROCESSOS', icon:'⚒', iconBg:'#eaf6fb', iconColor:'#1f7a99'},
+ {id:'marketing', num:'08', label:'Marketing', crumb:'POP · Marketing', category:'TRILHA DE PROCESSOS', icon:'◉', iconBg:'#fdf0f5', iconColor:'#c23a7a'}
 ];
 
 /* ordem de desbloqueio — cada módulo exige o anterior concluído; 'inicio' é sempre livre */
 /* 'empreiteiras' não é mais um módulo separado: seu conteúdo virou uma seção dentro de 'dp' (Departamento Pessoal) */
-const unlockOrder = ['principios','organograma','lideranca','dp','planejamento','financeiro','compras'];
+const unlockOrder = ['principios','organograma','lideranca','dp','planejamento','financeiro','compras','marketing'];
 function isLocked(id){
   if(id === 'inicio') return false;
   const i = unlockOrder.indexOf(id);
@@ -931,7 +1287,7 @@ dp(){
 
 planejamento(){
   return `
-  <div class="section-label">Módulo 06 · Trilha de Processos</div>
+  <div class="section-label">Módulo 05 · Trilha de Processos</div>
   <h2 class="page-title">POP · Planejamento de Obras</h2>
   <p class="page-sub">Procedimento Operacional Padrão do Setor de Planejamento — cronogramas, acompanhamento físico, orçamento, sistemas (Mega/Approvo) e relatórios gerenciais. Revisão 00 · 19/09/2025.</p>
   <div class="accordion">
@@ -946,13 +1302,29 @@ planejamento(){
         </div>
       </div>`).join('')}
   </div>
+
+  <div class="section-label" style="margin-top:34px;">Sub-módulo · Fluxogramas — Sistema MEGA (A.D.O.)</div>
+  <p class="page-sub">Passo a passo operacional no sistema MEGA para Administração de Obras: apropriação, contratos, medição, notas, materiais, relatórios e acessos.</p>
+  <div class="accordion">
+    ${fluxogramasAdoSections.map((s,i)=>`
+      <div class="acc-item">
+        <div class="acc-head">
+          <div class="htitle"><span class="tag">${s.tag}</span><h4>${s.title}</h4></div>
+          <span class="chev">▾</span>
+        </div>
+        <div class="acc-body" style="max-height:0">
+          <div class="acc-body-inner">${s.body}</div>
+        </div>
+      </div>`).join('')}
+  </div>
+
   ${pagerHTML('planejamento')}
   `;
 },
 
 financeiro(){
   return `
-  <div class="section-label">Módulo 07 · Trilha de Processos</div>
+  <div class="section-label">Módulo 06 · Trilha de Processos</div>
   <h2 class="page-title">POP · Financeiro</h2>
   <p class="page-sub">Procedimento Operacional Padrão do Setor Financeiro — Contas a Receber, Contas a Pagar e Composição do Fluxo de Caixa. Revisão 00 · 12/05/2025.</p>
   <div class="accordion">
@@ -973,7 +1345,7 @@ financeiro(){
 
 compras(){
   return `
-  <div class="section-label">Módulo 08 · Trilha de Processos</div>
+  <div class="section-label">Módulo 07 · Trilha de Processos</div>
   <h2 class="page-title">POP · Compras</h2>
   <p class="page-sub">Procedimento Operacional Padrão do Setor de Compras — cotação, negociação, aprovação por alçada e acompanhamento de entrega. Revisão 00 · 29/08/2025.</p>
   <div class="accordion">
@@ -990,6 +1362,27 @@ compras(){
   </div>
   ${pagerHTML('compras')}
   `;
+},
+
+marketing(){
+  return `
+  <div class="section-label">Módulo 08 · Trilha de Processos</div>
+  <h2 class="page-title">POP · Marketing</h2>
+  <p class="page-sub">Processos do Setor de Marketing — planejamento de campanhas, criação de materiais, implementação técnica, monitoramento/otimização e gestão de redes sociais.</p>
+  <div class="accordion">
+    ${popMarketingSections.map((s,i)=>`
+      <div class="acc-item ${i===0?'open':''}">
+        <div class="acc-head">
+          <div class="htitle"><span class="tag">${s.tag}</span><h4>${s.title}</h4></div>
+          <span class="chev">▾</span>
+        </div>
+        <div class="acc-body" style="${i===0?'max-height:none':'max-height:0'}">
+          <div class="acc-body-inner">${s.body}</div>
+        </div>
+      </div>`).join('')}
+  </div>
+  ${pagerHTML('marketing')}
+  `;
 }
 };
 
@@ -1002,7 +1395,8 @@ function moduleDesc(id){
     lideranca:'Para gestores e diretores: cada princípio aplicado à gestão de pessoas, com exemplos e frameworks.',
     planejamento:'Cronogramas, acompanhamento físico, orçamento e sistemas (Mega/Approvo) — do Setor de Planejamento.',
     financeiro:'Contas a Receber, Contas a Pagar e Composição do Fluxo de Caixa — do Setor Financeiro.',
-    compras:'Cotação, negociação, aprovação por alçada e acompanhamento de entrega — do Setor de Compras.'
+    compras:'Cotação, negociação, aprovação por alçada e acompanhamento de entrega — do Setor de Compras.',
+    marketing:'Planejamento de campanhas, criação de materiais, implementação técnica e gestão de redes sociais — do Setor de Marketing.'
   };
   return map[id] || '';
 }

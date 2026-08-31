@@ -55,16 +55,19 @@ Nome do usuário é livre (usado só para salvar progresso).
 
 Definida no array `modules` + `unlockOrder` em `app.js`. Cada módulo só libera depois que o anterior é marcado como concluído (`inicio` é sempre livre e **não** aparece como card clicável dentro de si mesmo — isso já foi um bug corrigido).
 
-Ordem atual (7 módulos + Início):
+Ordem atual (8 módulos + Início):
 1. `principios` — Boas-vindas & Princípios Katz (inclui Missão/Sonho/Negócio/Valores)
 2. `organograma` — Nossa Estrutura (organograma + seção **Colaboradores**, diretório de contatos)
 3. `lideranca` — Guia de Liderança
 4. `dp` — Departamento Pessoal (**inclui como sub-módulo, na mesma página**, a Documentação de Empreiteiras — não é mais módulo separado)
-5. `planejamento` — POP Planejamento de Obras
+5. `planejamento` — POP Planejamento de Obras (**inclui como sub-módulo, na mesma página**, os Fluxogramas do sistema MEGA/A.D.O. — 10 passo-a-passos operacionais)
 6. `financeiro` — POP Financeiro
 7. `compras` — POP Compras
+8. `marketing` — POP Marketing (5 processos: campanhas, criação de materiais, implementação técnica, monitoramento/otimização, redes sociais)
 
-Cada POP é um array de seções (`popSections`, `docEmpSections`, `popPlanejamentoSections`, `popFinanceiroSections`, `popComprasSections`) renderizado como accordion. Ver comentários no topo de `app.js`.
+Cada POP é um array de seções (`popSections`, `docEmpSections`, `popPlanejamentoSections`, `fluxogramasAdoSections`, `popFinanceiroSections`, `popComprasSections`, `popMarketingSections`) renderizado como accordion. Ver comentários no topo de `app.js`.
+
+⚠️ **Atenção ao adicionar/remover módulo:** o texto "Módulo NN" dentro de cada renderer (`<div class="section-label">Módulo 05 · ...`) é **hardcoded** e separado do campo `num` em `modules` — os dois precisam ser atualizados juntos manualmente. Já aconteceu de ficarem dessincronizados depois de remover um módulo do meio da lista.
 
 ## Seção "Colaboradores" (dentro de Nossa Estrutura)
 

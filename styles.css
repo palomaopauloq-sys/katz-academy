@@ -228,7 +228,7 @@ h2.page-title{font-size:26px;font-weight:800;margin:0 0 6px;color:var(--navy-950
 .acc-body{max-height:0; overflow:hidden; transition:max-height .25s ease;}
 .acc-body-inner{padding:0 20px 20px; font-size:13.3px; color:var(--ink-soft); line-height:1.65;}
 .acc-body-inner p{margin:0 0 10px;}
-.acc-body-inner ul{margin:0 0 10px; padding-left:18px;}
+.acc-body-inner ul, .acc-body-inner ol{margin:0 0 10px; padding-left:18px;}
 .acc-body-inner li{margin-bottom:5px;}
 .meta-row{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px;}
 .meta-chip{font-size:11px; font-family:'IBM Plex Mono'; background:var(--paper-dim); border:1px solid var(--line); color:var(--navy-800); padding:3px 9px; border-radius:20px;}

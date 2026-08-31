@@ -58,6 +58,9 @@ Definida em `app.js`, array `unlockOrder`. Ordem atual:
 3. `lideranca` — Guia de Liderança
 4. `dp` — Departamento Pessoal
 5. `empreiteiras` — Documentação de Empreiteiras
+6. `planejamento` — POP Planejamento de Obras
+7. `financeiro` — POP Financeiro
+8. `compras` — POP Compras
 
 Cada módulo só é liberado depois que o anterior é marcado como concluído. `inicio` (visão geral) é sempre livre.
 
@@ -73,6 +76,9 @@ Todo o conteúdo textual está em `app.js`, em constantes no topo do arquivo:
 | `orgData` | Organograma (CEO → áreas de apoio → Financeiro / Comercial / Engenharia) |
 | `popSections` | POP do Departamento Pessoal (accordion) |
 | `docEmpSections` | Documentação de Empreiteiras (accordion) |
+| `popPlanejamentoSections` | POP do Setor de Planejamento de Obras (accordion) |
+| `popFinanceiroSections` | POP do Setor Financeiro (accordion) |
+| `popComprasSections` | POP do Setor de Compras (accordion) |
 | `modules` | Lista de módulos da trilha (id, número, categoria, ícone, cor) |
 
 ## Design

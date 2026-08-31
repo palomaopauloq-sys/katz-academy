@@ -271,6 +271,242 @@ const docEmpSections = [
    <p style="margin-top:10px">Alternativas de contratação avaliadas junto ao jurídico e à documentação padrão de due diligence, mantendo o mesmo rigor de conferência.</p>`}
 ];
 
+/* POP — Planejamento de Obras */
+const popPlanejamentoSections = [
+ {tag:'1–4', title:'Objetivo, aplicação e definições', body:`
+   <p>Este POP estabelece diretrizes, responsabilidades e rotinas para o Setor de Planejamento, padronizando processos, otimizando recursos e garantindo o controle eficaz dos projetos e a qualidade das informações para a tomada de decisão.</p>
+   <p>Aplica-se a todos os colaboradores do Setor de Planejamento e às interfaces com Obras, Orçamentos, Financeiro, RH e Diretoria.</p>
+   <p><b>Principais definições:</b></p>
+   <ul>
+     <li><b>MS Project:</b> software de gerenciamento de projetos para elaboração e controle de cronogramas.</li>
+     <li><b>Curva S:</b> gráfico da evolução acumulada de uma variável (física ou financeira), comparando planejado x realizado.</li>
+     <li><b>PAMO:</b> Planilha de Acompanhamento de Medição de Obra.</li>
+     <li><b>Mega / Approvo:</b> ERP da empresa e sistema de aprovação de pagamentos e documentos.</li>
+     <li><b>Lean Construction:</b> filosofia de gestão focada na eliminação de desperdícios na construção.</li>
+     <li><b>Linha de Balanço:</b> técnica de planejamento e controle para obras com atividades repetitivas.</li>
+   </ul>`},
+ {tag:'5', title:'Responsabilidades', body:`
+   <table class="doctable">
+     <tr><th>Papel</th><th>Responsabilidade</th></tr>
+     <tr><td>Coordenador de Planejamento</td><td>Lidera a equipe, garante prazos e processos, valida relatórios gerenciais e é a interface principal com a diretoria.</td></tr>
+     <tr><td>Analista de Planejamento (Cronogramas)</td><td>Elaboração e atualização de cronogramas, acompanhamento físico das obras, relatórios e suporte à análise de dados.</td></tr>
+     <tr><td>Analista de Planejamento (Orçamentário)</td><td>Controle orçamentário, cronogramas físico-financeiros e análise de desvios financeiros.</td></tr>
+     <tr><td>Analista de Planejamento (Sistemas)</td><td>Gestão dos sistemas Mega e Approvo, suporte aos usuários, parametrizações e treinamentos.</td></tr>
+   </table>`},
+ {tag:'6.1.1 / 6.1.2', title:'Cronograma executivo e acompanhamento semanal', body:`
+   <div class="flow">
+     <div class="fnode">Recebimento do orçamento e escopo da obra</div>
+     <span class="farrow">→</span>
+     <div class="fnode">Estruturação no MS Project (atividades, predecessoras, durações, recursos)</div>
+     <span class="farrow">→</span>
+     <div class="fnode">Validação em reunião com Engenheiro da Obra e Coordenador</div>
+     <span class="farrow">→</span>
+     <div class="fnode">Linha de base (baseline) salva no MS Project</div>
+   </div>
+   <p style="margin-top:14px"><b>Acompanhamento semanal da evolução física:</b></p>
+   <table class="doctable">
+     <tr><th>Quando</th><th>O quê</th><th>Quem</th></tr>
+     <tr><td class="val">Sexta, até 17h</td><td>Informa o avanço físico das atividades</td><td>Engenheiro da Obra</td></tr>
+     <tr><td class="val">Segunda, até 12h</td><td>Atualiza o cronograma no MS Project com os dados recebidos</td><td>Analista de Planejamento</td></tr>
+     <tr><td>—</td><td>Análise de desvios (atrasos, adiantamentos) em relação à linha de base</td><td>Analista de Planejamento</td></tr>
+     <tr><td>—</td><td>Relatório de acompanhamento enviado à equipe da obra e ao Coordenador</td><td>Analista de Planejamento</td></tr>
+   </table>`},
+ {tag:'6.1.3 – 6.1.5', title:'Reuniões, simulação de cenários e gestão à vista', body:`
+   <p><b>Reuniões semanais de alinhamento:</b> o Coordenador agenda reunião semanal com os engenheiros das obras — pauta com análise de desvios, riscos e planos de ação corretivos; uma ata registra decisões e responsáveis.</p>
+   <p><b>Simulação de cenários:</b> a diretoria ou a obra solicita simulações (ex.: impacto de chuvas, falta de material) → o Analista usa o MS Project para simular impactos em prazo e custo → os resultados são apresentados para a tomada de decisão.</p>
+   <p><b>Gestão à vista:</b> cronogramas simplificados e os principais indicadores são impressos e fixados em local visível no canteiro de obras, com atualização semanal pelo Analista de Planejamento ou pelo estagiário da área.</p>`},
+ {tag:'6.2', title:'Orçamento e físico-financeiro', body:`
+   <p><b>Controle orçado x executado (mensal):</b> o Coordenador extrai os custos realizados do sistema Mega → compara com os valores previstos no orçamento da obra → identifica e analisa os principais desvios, apontando causas → um relatório de análise crítica é enviado ao Coordenador e à diretoria.</p>
+   <p><b>Cronograma físico-financeiro:</b> a pedido da diretoria ou de instituições financeiras, o Coordenador elabora a projeção de desembolso mensal com base no cronograma executivo e no orçamento, e valida antes do envio.</p>
+   <p><b>Aditivos orçamentários:</b> a equipe da obra identifica a necessidade (serviço extra, mudança de escopo) → após aprovação da diretoria, o Analista de Planejamento cria o aditivo no sistema Mega.</p>
+   <div class="callout"><span class="ico">ℹ</span><span>O orçamentista elabora e envia o orçamento ao Analista de Planejamento. A partir desse envio, o Planejamento assume a gestão físico-financeira do contrato e o controle e registro dos aditivos no Mega.</span></div>`},
+ {tag:'6.3', title:'Gestão de sistemas (Mega e Approvo)', body:`
+   <p><b>Suporte aos usuários:</b> dúvidas e solicitações são enviadas por e-mail ao setor de Planejamento, que soluciona junto ao suporte do Mega — atendimento por ordem de chegada, com prioridade para erros que impeçam a continuidade do trabalho.</p>
+   <p><b>Criação e liberação de acessos:</b> no Mega, o RH envia e-mail à responsável (Marina) solicitando a criação do usuário; no Approvo, o gestor da área solicita ao Planejamento a criação e a definição do perfil de acesso. A criação é feita e o novo colaborador é comunicado.</p>
+   <p><b>Treinamentos internos:</b> todo novo colaborador ou estagiário passa por um treinamento introdutório de Mega e Planejamento — o setor agenda e ministra os treinamentos, mantendo manuais e tutoriais atualizados.</p>`},
+ {tag:'6.4 – 6.5', title:'Relatórios, apresentações e desenvolvimento interno', body:`
+   <p><b>Relatórios gerenciais:</b> o Analista de Planejamento consolida os dados de avanço físico, financeiro e de desempenho das obras, monta os relatórios em templates padronizados e envia à diretoria e demais áreas interessadas nas datas pré-definidas.</p>
+   <p><b>Apresentações mensais:</b> o Analista reúne os principais resultados e análises do mês e monta a apresentação em formato padrão; o Coordenador valida antes da reunião com a diretoria.</p>
+   <p><b>Estruturação de processos:</b> o Coordenador mapeia os processos atuais, identifica gargalos e oportunidades de melhoria, atualiza este POP e comunica as mudanças a toda a equipe.</p>
+   <p><b>Novas metodologias:</b> o Coordenador estuda e seleciona metodologias (ex.: Lean Construction), testa em um projeto piloto, monitora os resultados e expande para outras obras se forem positivos.</p>`},
+ {tag:'7', title:'Indicadores de desempenho (KPIs)', body:`
+   <table class="doctable">
+     <tr><th>Indicador</th><th>Meta</th><th>Frequência</th></tr>
+     <tr><td>Aderência ao Cronograma</td><td class="val">≥ 85%</td><td>Semanal</td></tr>
+     <tr><td>Desvio de Prazo Médio</td><td class="val">≤ 3 dias</td><td>Semanal</td></tr>
+     <tr><td>Eficiência da Curva S</td><td class="val">≤ 5%</td><td>Mensal</td></tr>
+     <tr><td>Controle Orçamentário</td><td class="val">95–105%</td><td>Mensal</td></tr>
+     <tr><td>Desvio Físico-Financeiro</td><td class="val">≤ 3%</td><td>Mensal</td></tr>
+     <tr><td>Tempo de Resposta do Suporte</td><td class="val">≤ 4h</td><td>Semanal</td></tr>
+     <tr><td>Taxa de Resolução de Problemas</td><td class="val">≥ 80%</td><td>Mensal</td></tr>
+     <tr><td>Pontualidade na Entrega de Relatórios</td><td class="val">≥ 95%</td><td>Mensal</td></tr>
+     <tr><td>Implementação de Melhorias</td><td class="val">≥ 80%</td><td>Trimestral</td></tr>
+   </table>`}
+];
+
+/* POP — Financeiro (Contas a Receber, Contas a Pagar e Fluxo de Caixa) */
+const popFinanceiroSections = [
+ {tag:'1–3', title:'Objetivo, aplicação e definições', body:`
+   <p>Garantir a padronização, eficiência e acuracidade dos processos financeiros — Contas a Receber, Contas a Pagar e Gestão do Fluxo de Caixa — assegurando conformidade com as políticas internas e contribuindo para a saúde financeira e a tomada de decisões estratégicas.</p>
+   <p>Aplica-se a todas as atividades e colaboradores das operações financeiras da Construtora Katz, nas áreas de Contas a Receber, Contas a Pagar e Gestão do Fluxo de Caixa.</p>
+   <p><b>Principais definições:</b></p>
+   <ul>
+     <li><b>Sistema MEGA:</b> ERP utilizado para registro e controle das operações financeiras.</li>
+     <li><b>Contas a Receber (CR):</b> valores que a empresa tem a receber de clientes ou outras fontes.</li>
+     <li><b>Contas a Pagar (CP):</b> valores que a empresa tem a pagar a fornecedores ou outras obrigações.</li>
+     <li><b>Fluxo de Caixa:</b> movimentação de entradas e saídas de dinheiro em um determinado período.</li>
+     <li><b>Conciliação Bancária:</b> conferência entre o extrato bancário e os registros contábeis da empresa.</li>
+     <li><b>Inadimplência:</b> não cumprimento de uma obrigação financeira no prazo estabelecido.</li>
+     <li><b>Alçada de Aprovação:</b> nível de autoridade necessário para aprovar determinadas transações financeiras.</li>
+   </ul>`},
+ {tag:'3.2', title:'Responsabilidades', body:`
+   <table class="doctable">
+     <tr><th>Área</th><th>Responsabilidade</th></tr>
+     <tr><td>Setor Financeiro</td><td>Execução das atividades operacionais, registro, controle, conciliação e geração de relatórios.</td></tr>
+     <tr><td>Setor de Incorporação/Vendas</td><td>Fornecer os dados de vendas de forma precisa e em tempo hábil para o registro das Contas a Receber.</td></tr>
+     <tr><td>Diretoria/Gerência</td><td>Aprovação de pagamentos, definição de prioridades e decisões estratégicas com base nas informações financeiras.</td></tr>
+     <tr><td>Contabilidade</td><td>Receber e processar os documentos financeiros para fins de escrituração contábil e fiscal.</td></tr>
+   </table>`},
+ {tag:'4', title:'Contas a Receber', body:`
+   <p>Garante o registro e o controle dos valores devidos à empresa, desde a origem da venda até a conciliação bancária, minimizando riscos de inadimplência e otimizando o fluxo de caixa.</p>
+   <div class="flow">
+     <div class="fnode">4.1 Receber dados de vendas do setor de incorporação</div>
+     <span class="farrow">→</span>
+     <div class="fnode">4.2 Lançar a venda no sistema de gestão</div>
+     <span class="farrow">→</span>
+     <div class="fnode">4.3 Cadastrar o contrato no Mega</div>
+     <span class="farrow">→</span>
+     <div class="fnode">4.4 Criar proposta, forma de pagamento e lançar o contrato no Mega</div>
+     <span class="farrow">→</span>
+     <div class="fnode">4.5 Criar planilha de controle do pagamento do cliente</div>
+     <span class="farrow">→</span>
+     <div class="fnode">4.6 Controlar os pagamentos financeiros</div>
+     <span class="farrow">→</span>
+     <div class="fnode">4.7 Verificar pagamentos do dia e levantar saldos bancários</div>
+   </div>
+   <p style="font-size:12px;color:var(--slate);margin-top:10px">Responsável em todas as etapas: <b>Financeiro</b>. Ferramentas: e-mail, sistema integrado, planilha eletrônica, Sistema MEGA, extratos bancários.</p>`},
+ {tag:'5', title:'Contas a Pagar', body:`
+   <p>Gerencia as obrigações financeiras da empresa, desde o recebimento dos documentos até a efetivação do pagamento e sua conciliação, visando pontualidade e otimização dos recursos.</p>
+   <div class="flow">
+     <div class="fnode">5.1 Receber notas, faturas e boletos (e-mail ou físico)</div>
+     <span class="farrow">→</span>
+     <div class="fnode">5.2 Lançar notas, faturas e boletos no Mega</div>
+     <span class="farrow">→</span>
+     <div class="fnode">5.3 Anexar no Mega o PDF da conta lançada</div>
+     <span class="farrow">→</span>
+     <div class="fnode">5.4 Programação da semana</div>
+     <span class="farrow">→</span>
+     <div class="fnode">5.5 Emitir relatório das contas em aberto (semana seguinte)</div>
+     <span class="farrow">→</span>
+     <div class="fnode">5.6 Compor pasta física com as contas lançadas e impressas</div>
+     <span class="farrow">→</span>
+     <div class="fnode">5.7 Anexar relatório impresso na pasta física</div>
+   </div>
+   <p style="font-size:12px;color:var(--slate);margin-top:10px">Todos os documentos devem estar completos e válidos antes do lançamento; o comprovante digitalizado garante auditoria e rastreabilidade.</p>`},
+ {tag:'6', title:'Composição do Fluxo de Caixa', body:`
+   <p>Permite o acompanhamento diário das entradas e saídas, a projeção de cenários e a tomada de decisão sobre pagamentos e investimentos.</p>
+   <div class="flow">
+     <div class="fnode">6.1 Receber saldos das contas diários</div>
+     <span class="farrow">→</span>
+     <div class="fnode">6.2 Receber notas e boletos para programação do dia</div>
+     <span class="farrow">→</span>
+     <div class="fnode">6.3 Avaliar prioridade de pagamento com o diretor</div>
+     <span class="farrow">→</span>
+     <div class="fnode">6.4 Gerente e diretor aprovam os pagamentos do dia</div>
+     <span class="farrow">→</span>
+     <div class="fnode">6.5 Realizar os pagamentos aprovados</div>
+     <span class="farrow">→</span>
+     <div class="fnode">6.6 Anexar comprovante no sistema, servidor e pasta física</div>
+     <span class="farrow">→</span>
+     <div class="fnode">6.7 Realizar baixas via sistema</div>
+   </div>
+   <div class="callout" style="margin-top:14px"><span class="ico">⚠</span><span>A aprovação formaliza a liberação dos pagamentos, garantindo conformidade com as políticas de alçada.</span></div>`}
+];
+
+/* POP — Compras */
+const popComprasSections = [
+ {tag:'1–4', title:'Objetivo, escopo, definições e responsabilidades', body:`
+   <p>Padronizar e orientar as atividades do processo de compras, do recebimento da solicitação ao acompanhamento da entrega, garantindo eficiência, transparência e conformidade com as políticas da empresa.</p>
+   <p>Aplica-se a todas as compras de materiais e serviços solicitados pelas obras — de requisições simples a compras de alto valor que necessitam aprovações especiais.</p>
+   <p><b>Definições:</b></p>
+   <ul>
+     <li><b>RM:</b> Requisição de Material.</li>
+     <li><b>MEGA:</b> sistema de gestão utilizado pela empresa.</li>
+     <li><b>Mapa de Cotação:</b> documento comparativo das propostas recebidas dos fornecedores.</li>
+     <li><b>Obras KATZ / Obras HAUZ:</b> tipos de obra com regras específicas de aprovação.</li>
+   </ul>
+   <p><b>Responsabilidades:</b></p>
+   <table class="doctable">
+     <tr><th>Papel</th><th>Responsabilidade</th></tr>
+     <tr><td>Obra</td><td>Envio da solicitação e acompanhamento da entrega.</td></tr>
+     <tr><td>Setor de Compras</td><td>Execução do processo de cotação, negociação e emissão do pedido.</td></tr>
+     <tr><td>Gerenciador de Custos</td><td>Aprovação do mapa de cotação (quando aplicável).</td></tr>
+     <tr><td>Engenheiro</td><td>Aprovação de compras até R$ 5.000.</td></tr>
+     <tr><td>Superintendente Caetano</td><td>Aprovação conforme limites estabelecidos.</td></tr>
+     <tr><td>Diretor Guilherme Vargas</td><td>Aprovação de compras acima de R$ 15.000 (obras HAUZ).</td></tr>
+   </table>`},
+ {tag:'5.1 – 5.2', title:'Recebimento da solicitação e abertura da requisição', body:`
+   <p><b>Etapa 1 — Recebimento (Setor de Compras):</b> a obra envia a solicitação por e-mail, com o número da RM e a descrição detalhada do material. Prazo: <b>D+3</b> (dia do recebimento + 3 dias úteis). Especificações erradas reiniciam o prazo D+3; materiais de difícil localização podem ter prazo estendido mediante comunicação prévia à obra.</p>
+   <p>Ações: verificar se as informações obrigatórias estão presentes, confirmar o recebimento da solicitação para a obra e registrar a data de recebimento para controle de prazo.</p>
+   <p><b>Etapa 2 — Abertura da requisição no MEGA (Obra):</b> acessar o sistema, inserir o número da RM, gerar a requisição com todas as informações necessárias e validar os dados inseridos.</p>`},
+ {tag:'5.3 – 5.4', title:'Cotação com fornecedores e negociação', body:`
+   <p><b>Cotação</b> (mínimo obrigatório: 3 fornecedores): baixar a RM no sistema, identificar fornecedores qualificados para o material solicitado, enviar e-mail solicitando cotação, estabelecer prazo para retorno das propostas, receber e analisar as cotações e montar o Mapa de Cotação no sistema MEGA.</p>
+   <p><b>Análise e negociação</b> — critérios de avaliação: preço, prazo de pagamento, prazo de entrega, qualidade do produto/serviço e histórico do fornecedor. O Setor de Compras compara as propostas, negocia preços e prazos, avalia o melhor custo-benefício e documenta as negociações realizadas.</p>`},
+ {tag:'5.5 – 5.6', title:'Envio do mapa de cotação e aprovação da compra', body:`
+   <p><b>Envio do mapa de cotação</b> (mínimo 3 propostas):</p>
+   <ul>
+     <li><b>Obras com Gerenciador de Custos:</b> Compras envia o mapa para a obra → a obra encaminha ao gerenciador de custos → aguarda aprovação.</li>
+     <li><b>Obras sem Gerenciador:</b> o Setor de Compras escolhe a melhor opção com base no custo-benefício e documenta a justificativa da escolha.</li>
+   </ul>
+   <p><b>Regras de aprovação por valor e tipo de obra:</b></p>
+   <table class="doctable">
+     <tr><th>Tipo de obra</th><th>Faixa de valor</th><th>Aprovador</th></tr>
+     <tr><td>KATZ</td><td class="val">Até R$ 5.000,00</td><td>Engenheiro (no sistema)</td></tr>
+     <tr><td>KATZ</td><td class="val">Acima de R$ 5.000,00</td><td>Superintendente Caetano</td></tr>
+     <tr><td>HAUZ</td><td class="val">Até R$ 5.000,00</td><td>Engenheiro</td></tr>
+     <tr><td>HAUZ</td><td class="val">R$ 5.000,01 a R$ 15.000,00</td><td>Superintendente Caetano</td></tr>
+     <tr><td>HAUZ</td><td class="val">Acima de R$ 15.000,00</td><td>Diretor Guilherme Vargas</td></tr>
+   </table>`},
+ {tag:'5.7 – 5.8', title:'Emissão do pedido e acompanhamento da entrega', body:`
+   <p><b>Emissão do pedido de compra:</b> gerar o PDF do pedido no sistema, enviar ao fornecedor para confirmação, enviar cópia à obra para ciência e arquivar cópia no sistema. Documentos gerados: Pedido de Compra em PDF e comprovante de envio.</p>
+   <p><b>Acompanhamento da entrega:</b></p>
+   <ul>
+     <li><b>Obra:</b> acompanha o prazo de entrega, cobra em caso de atraso, comunica problemas ao Setor de Compras e confirma o recebimento dos materiais.</li>
+     <li><b>Setor de Compras:</b> dá suporte à obra, intermedia a comunicação com o fornecedor quando necessário e atualiza o status no sistema MEGA.</li>
+   </ul>`},
+ {tag:'Fluxo', title:'Fluxograma do processo', body:`
+   <div class="flow">
+     <div class="fnode">Obra envia solicitação (e-mail)</div>
+     <span class="farrow">→</span>
+     <div class="fnode">Compras recebe e abre a RM no MEGA</div>
+     <span class="farrow">→</span>
+     <div class="fnode">Cotação com fornecedores (mín. 3)</div>
+     <span class="farrow">→</span>
+     <div class="fnode">Análise e negociação</div>
+     <span class="farrow">→</span>
+     <div class="fnode">Envio do mapa de cotação</div>
+     <span class="fdiamond">Com gerenciador de custos?</span>
+     <div class="fnode">Sim → obra encaminha ao gerenciador · Não → Compras escolhe a melhor opção</div>
+     <span class="farrow">→</span>
+     <div class="fnode">Aprovação conforme hierarquia</div>
+     <span class="farrow">→</span>
+     <div class="fnode">Emissão do pedido de compra</div>
+     <span class="farrow">→</span>
+     <div class="fnode">Envio para fornecedor e obra</div>
+     <span class="farrow">→</span>
+     <div class="fnode">Acompanhamento da entrega</div>
+   </div>`},
+ {tag:'7', title:'Indicadores de desempenho', body:`
+   <table class="doctable">
+     <tr><th>Indicador</th><th>O que mede</th></tr>
+     <tr><td>Prazo de Atendimento</td><td>% de solicitações atendidas dentro do prazo D+3</td></tr>
+     <tr><td>Economia Gerada</td><td>% de economia obtida através das negociações</td></tr>
+     <tr><td>Qualidade dos Fornecedores</td><td>Índice de satisfação com as entregas realizadas</td></tr>
+     <tr><td>Conformidade do Processo</td><td>% de processos executados conforme este POP</td></tr>
+   </table>
+   <p style="font-size:12px;color:var(--slate)">Documento controlado — cópia não controlada quando impressa. Todos os colaboradores envolvidos no processo devem ser treinados neste procedimento.</p>`}
+];
+
 /* ============================ MODULES ============================ */
 
 const modules = [
@@ -279,11 +515,14 @@ const modules = [
  {id:'organograma', num:'02', label:'Nossa Estrutura', crumb:'Nossa Estrutura', category:'TRILHA DE CULTURA', icon:'▤', iconBg:'#e9f0f9', iconColor:'#2a5484'},
  {id:'lideranca', num:'03', label:'Guia de Liderança', crumb:'Guia de Liderança', category:'TRILHA DE LIDERANÇA', icon:'◈', iconBg:'#e6f4f3', iconColor:'#2b8f86'},
  {id:'dp', num:'04', label:'Departamento Pessoal', crumb:'Departamento Pessoal', category:'TRILHA DE PROCESSOS', icon:'▣', iconBg:'#f2ecf9', iconColor:'#7c5cb8'},
- {id:'empreiteiras', num:'05', label:'Documentação de Empreiteiras', crumb:'Documentação de Empreiteiras', category:'TRILHA DE PROCESSOS', icon:'⛊', iconBg:'#fdece7', iconColor:'#d9622b'}
+ {id:'empreiteiras', num:'05', label:'Documentação de Empreiteiras', crumb:'Documentação de Empreiteiras', category:'TRILHA DE PROCESSOS', icon:'⛊', iconBg:'#fdece7', iconColor:'#d9622b'},
+ {id:'planejamento', num:'06', label:'Planejamento de Obras', crumb:'POP · Planejamento de Obras', category:'TRILHA DE PROCESSOS', icon:'◫', iconBg:'#eef0fb', iconColor:'#5b5fc7'},
+ {id:'financeiro', num:'07', label:'Financeiro', crumb:'POP · Financeiro', category:'TRILHA DE PROCESSOS', icon:'¤', iconBg:'#fdeeee', iconColor:'#c0392b'},
+ {id:'compras', num:'08', label:'Compras', crumb:'POP · Compras', category:'TRILHA DE PROCESSOS', icon:'⚒', iconBg:'#eaf6fb', iconColor:'#1f7a99'}
 ];
 
 /* ordem de desbloqueio — cada módulo exige o anterior concluído; 'inicio' é sempre livre */
-const unlockOrder = ['principios','organograma','lideranca','dp','empreiteiras'];
+const unlockOrder = ['principios','organograma','lideranca','dp','empreiteiras','planejamento','financeiro','compras'];
 function isLocked(id){
   if(id === 'inicio') return false;
   const i = unlockOrder.indexOf(id);
@@ -647,6 +886,69 @@ empreiteiras(){
   </div>
   ${pagerHTML('empreiteiras')}
   `;
+},
+
+planejamento(){
+  return `
+  <div class="section-label">Módulo 06 · Trilha de Processos</div>
+  <h2 class="page-title">POP · Planejamento de Obras</h2>
+  <p class="page-sub">Procedimento Operacional Padrão do Setor de Planejamento — cronogramas, acompanhamento físico, orçamento, sistemas (Mega/Approvo) e relatórios gerenciais. Revisão 00 · 19/09/2025.</p>
+  <div class="accordion">
+    ${popPlanejamentoSections.map((s,i)=>`
+      <div class="acc-item ${i===0?'open':''}">
+        <div class="acc-head">
+          <div class="htitle"><span class="tag">${s.tag}</span><h4>${s.title}</h4></div>
+          <span class="chev">▾</span>
+        </div>
+        <div class="acc-body" style="${i===0?'max-height:none':'max-height:0'}">
+          <div class="acc-body-inner">${s.body}</div>
+        </div>
+      </div>`).join('')}
+  </div>
+  ${pagerHTML('planejamento')}
+  `;
+},
+
+financeiro(){
+  return `
+  <div class="section-label">Módulo 07 · Trilha de Processos</div>
+  <h2 class="page-title">POP · Financeiro</h2>
+  <p class="page-sub">Procedimento Operacional Padrão do Setor Financeiro — Contas a Receber, Contas a Pagar e Composição do Fluxo de Caixa. Revisão 00 · 12/05/2025.</p>
+  <div class="accordion">
+    ${popFinanceiroSections.map((s,i)=>`
+      <div class="acc-item ${i===0?'open':''}">
+        <div class="acc-head">
+          <div class="htitle"><span class="tag">${s.tag}</span><h4>${s.title}</h4></div>
+          <span class="chev">▾</span>
+        </div>
+        <div class="acc-body" style="${i===0?'max-height:none':'max-height:0'}">
+          <div class="acc-body-inner">${s.body}</div>
+        </div>
+      </div>`).join('')}
+  </div>
+  ${pagerHTML('financeiro')}
+  `;
+},
+
+compras(){
+  return `
+  <div class="section-label">Módulo 08 · Trilha de Processos</div>
+  <h2 class="page-title">POP · Compras</h2>
+  <p class="page-sub">Procedimento Operacional Padrão do Setor de Compras — cotação, negociação, aprovação por alçada e acompanhamento de entrega. Revisão 00 · 29/08/2025.</p>
+  <div class="accordion">
+    ${popComprasSections.map((s,i)=>`
+      <div class="acc-item ${i===0?'open':''}">
+        <div class="acc-head">
+          <div class="htitle"><span class="tag">${s.tag}</span><h4>${s.title}</h4></div>
+          <span class="chev">▾</span>
+        </div>
+        <div class="acc-body" style="${i===0?'max-height:none':'max-height:0'}">
+          <div class="acc-body-inner">${s.body}</div>
+        </div>
+      </div>`).join('')}
+  </div>
+  ${pagerHTML('compras')}
+  `;
 }
 };
 
@@ -657,7 +959,10 @@ function moduleDesc(id){
     organograma:'Onde você se encaixa: Financeiro, Comercial e Engenharia sob a Direção Geral.',
     dp:'Seus direitos e deveres como colaborador(a): admissão, ponto, folha, benefícios, férias e rescisão.',
     lideranca:'Para gestores e diretores: cada princípio aplicado à gestão de pessoas, com exemplos e frameworks.',
-    empreiteiras:'Para quem gerencia obra e qualidade: due diligence, checklists e calendário de pagamento de terceiros.'
+    empreiteiras:'Para quem gerencia obra e qualidade: due diligence, checklists e calendário de pagamento de terceiros.',
+    planejamento:'Cronogramas, acompanhamento físico, orçamento e sistemas (Mega/Approvo) — do Setor de Planejamento.',
+    financeiro:'Contas a Receber, Contas a Pagar e Composição do Fluxo de Caixa — do Setor Financeiro.',
+    compras:'Cotação, negociação, aprovação por alçada e acompanhamento de entrega — do Setor de Compras.'
   };
   return map[id] || '';
 }

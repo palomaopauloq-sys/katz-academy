@@ -767,6 +767,23 @@ principios(){
     <span><b>Por que estes princípios existem:</b> eles não são um cartaz na parede — são o critério que usamos para decidir, contratar, vender, atender e liderar. Quando houver dúvida sobre o que fazer, voltamos aqui. Para quem lidera — gerentes e diretores — estes princípios são também a régua: a liderança começa pelo exemplo, a cultura se materializa no que os líderes fazem, não no que dizem.</span>
   </div>
 
+  <div class="section-label" style="margin-top:28px;">Missão, Sonho, Negócio e Valores</div>
+  <div class="accordion" style="margin-bottom:24px;">
+    <div class="acc-body-inner" style="padding:20px;">
+      <p><b>Missão:</b> Trabalhar com qualidade e ética, dentro das normas técnicas, para que nossos produtos sejam superiores, nossos funcionários e parceiros compartilhem de nosso sucesso e nossos investidores tenham maior retorno financeiro.</p>
+      <p><b>Sonho:</b> Construir os empreendimentos mais modernos e luxuosos do Brasil.</p>
+      <p><b>Negócio:</b> Incorporação, construção e vendas no setor da construção civil.</p>
+      <p style="margin-top:14px"><b>Valores:</b></p>
+      <ul>
+        <li><b>Eficiência</b> — Atendimento das metas nos prazos estabelecidos.</li>
+        <li><b>Comprometimento</b> — Cumprimento das responsabilidades e compromissos assumidos.</li>
+        <li><b>Resultados</b> — Gestão com foco em resultados.</li>
+        <li><b>Ética</b> — Perfeita execução dos serviços aliada à transparência na execução dos mesmos.</li>
+        <li><b>Qualidade</b> — Acompanhamento e verificação de todos os serviços visando a satisfação de nossos clientes.</li>
+      </ul>
+    </div>
+  </div>
+
   <div class="principle-grid">
     ${principles.map(p=>`
       <div class="principle-card" data-n="${p.n}">
